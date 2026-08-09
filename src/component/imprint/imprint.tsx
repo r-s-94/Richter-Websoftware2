@@ -1,11 +1,10 @@
-import { HashLink } from "react-router-hash-link";
 import "../../variables.scss";
 import "./imprint.scss";
 
 export default function Imprint() {
   return (
     <section className="imprint-section">
-      <HashLink to="/#footer" className="imprint-section__link link no-link">
+      <a href="/" className="imprint-section__link link no-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -20,7 +19,7 @@ export default function Imprint() {
             d="M15.75 19.5 8.25 12l7.5-7.5"
           />
         </svg>
-      </HashLink>
+      </a>
 
       <h2 className="imprint-section__headline">Impressum</h2>
 
