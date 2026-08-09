@@ -38,6 +38,4 @@ export default function Imprint() {
       </div>
     </section>
   );
-
-  //
 }
