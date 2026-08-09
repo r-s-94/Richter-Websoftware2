@@ -1,0 +1,33 @@
+@use "../../variables.scss" as x;
+
+.footer-section {
+  width: 100%;
+  height: 3rem;
+  background-color: x.$dark-gray-color;
+  @include x.center-content();
+  column-gap: 3rem;
+
+  &__link,
+  &__copy-right {
+    font-size: 1rem;
+    color: x.$light-gray-color2;
+  }
+}
+
+/*@media screen and (max-width: 1000px) {
+  .footer-section {
+  }
+}*/
+
+@media screen and (max-width: 600px) {
+  .footer-section {
+    height: 4rem;
+    @include x.center-column-content();
+    row-gap: 0.5rem;
+
+    &__link,
+    &__copy-right {
+      font-size: 0.9rem;
+    }
+  }
+}

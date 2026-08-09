@@ -1,0 +1,410 @@
+@use "../../variables.scss" as x;
+
+.slider-section {
+  padding-bottom: 5rem;
+  @include x.center-column-content();
+  column-gap: 3rem;
+
+  &__buttons-and-slider {
+    @include x.center-content();
+    column-gap: 3rem;
+  }
+
+  &__canvas {
+    width: 63rem;
+    height: 60rem;
+    margin: auto 0;
+    background-color: white;
+    @include x.center-content();
+    /*background-color: x.$light-gray-color3;
+    box-shadow: 0 16px 16px 0 rgba(75, 75, 75, 0.5);*/
+    border: 1px solid #dbdbdb;
+    border-radius: 0.2rem;
+  }
+
+  &__slider {
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    @include x.center-content();
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__cart {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 10px 6px rgba(75, 75, 75, 0.5);
+  }
+
+  .active-cart {
+    width: 23rem;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .project-cart {
+    transform: translateZ(25rem);
+  }
+
+  .project-cart2 {
+    transform: rotateY(72deg) translateZ(25rem);
+  }
+
+  .project-cart3 {
+    transform: rotateY(144deg) translateZ(25rem);
+  }
+
+  .project-cart4 {
+    transform: rotateY(-144deg) translateZ(25rem);
+  }
+
+  .project-cart5 {
+    transform: rotateY(-72deg) translateZ(25rem);
+  }
+
+  &__img-container {
+    width: 100%;
+    height: 100%;
+    margin: 0.1rem auto;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.2rem;
+  }
+
+  &__img:hover {
+    scale: 1.1;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .prev-card,
+  .next-card {
+    width: 20rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__category {
+    margin-top: 0.3rem;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  &__cart-headline {
+    margin: 1rem auto;
+    font-size: 1.3rem;
+  }
+
+  &__project-options {
+    width: 100%;
+    @include x.center-content();
+    column-gap: 0.3rem;
+  }
+
+  &__project-button {
+    width: 13rem;
+    height: 2.5rem;
+    margin: 0.1rem 0 1rem 0;
+    @include x.center-content();
+    column-gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 0.2rem;
+  }
+
+  &__arrow-right-icon {
+    width: 1.4rem;
+  }
+
+  &__more-info-icon,
+  &__buy-ticket-icon {
+    width: 1.5rem;
+  }
+
+  &__prev-button,
+  &__next-button {
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: white;
+    @include x.center-content();
+    box-shadow: 0 0 4px 2px rgba(75, 75, 75, 0.5);
+    border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__prev-button {
+    margin-right: 7rem;
+  }
+
+  &__next-button {
+    margin-left: 7rem;
+  }
+
+  &__prev-button:hover,
+  &__next-button:hover {
+    color: x.$blue-color2;
+  }
+
+  &__prev-icon,
+  &__next-icon {
+    width: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .slider-section {
+    &__canvas {
+      width: 60rem;
+    }
+
+    &__prev-button {
+      margin-right: 3rem;
+    }
+
+    &__next-button {
+      margin-left: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .slider-section {
+    &__canvas {
+      width: 45rem;
+      height: 45rem;
+    }
+
+    .project-cart {
+      transform: translateZ(20rem);
+    }
+
+    .project-cart2 {
+      transform: rotateY(72deg) translateZ(20rem);
+    }
+
+    .project-cart3 {
+      transform: rotateY(144deg) translateZ(20rem);
+    }
+
+    .project-cart4 {
+      transform: rotateY(-144deg) translateZ(20rem);
+    }
+
+    .project-cart5 {
+      transform: rotateY(-72deg) translateZ(20rem);
+    }
+
+    &__category {
+      font-size: 0.7rem;
+    }
+
+    &__cart-headline {
+      font-size: 20px;
+    }
+
+    .active-cart {
+      width: 17rem;
+      height: auto;
+    }
+
+    .prev-card,
+    .next-card {
+      width: auto;
+      height: auto;
+    }
+
+    &__prev-button {
+      margin-right: 1rem;
+    }
+
+    &__next-button {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .slider-section {
+    padding-bottom: 10rem;
+
+    &__headline {
+      font-size: 2rem;
+    }
+
+    &__canvas {
+      width: 35rem;
+      height: 40rem;
+    }
+
+    .project-cart {
+      transform: translateZ(15rem);
+    }
+
+    .project-cart2 {
+      transform: rotateY(72deg) translateZ(15rem);
+    }
+
+    .project-cart3 {
+      transform: rotateY(144deg) translateZ(15rem);
+    }
+
+    .project-cart4 {
+      transform: rotateY(-144deg) translateZ(15rem);
+    }
+
+    .project-cart5 {
+      transform: rotateY(-72deg) translateZ(15rem);
+    }
+
+    &__category {
+      font-size: 0.6rem;
+    }
+
+    &__cart-headline {
+      font-size: 18px;
+    }
+
+    .active-cart {
+      width: 15rem;
+      height: auto;
+      padding: 0.7rem;
+    }
+
+    .prev-card,
+    .next-card {
+      width: auto;
+      height: auto;
+    }
+
+    &__prev-button,
+    &__next-button {
+      position: absolute;
+      top: 110rem;
+      width: 2.5rem;
+      height: 2.3rem;
+    }
+
+    &__prev-button {
+      left: 35%;
+    }
+
+    &__next-button {
+      right: 35%;
+    }
+
+    &__prev-icon,
+    &__next-icon {
+      width: 2rem;
+    }
+
+    &__project-button {
+      height: 2.3rem;
+      font-size: 15px;
+    }
+
+    &__arrow-right-icon {
+      width: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider-section {
+    padding-bottom: 7rem;
+
+    &__canvas {
+      width: 17rem;
+      height: 27rem;
+    }
+
+    .project-cart {
+      transform: translateZ(7rem);
+    }
+
+    .project-cart2 {
+      transform: rotateY(72deg) translateZ(7rem);
+    }
+
+    .project-cart3 {
+      transform: rotateY(144deg) translateZ(7rem);
+    }
+
+    .project-cart4 {
+      transform: rotateY(-144deg) translateZ(7rem);
+    }
+
+    .project-cart5 {
+      transform: rotateY(-72deg) translateZ(7rem);
+    }
+
+    &__category {
+      font-size: 0.5rem;
+    }
+
+    &__cart-headline {
+      font-size: 15px;
+    }
+
+    .active-cart {
+      width: 9.5rem;
+      height: auto;
+      padding: 0.5rem;
+      z-index: 0;
+    }
+
+    .prev-card,
+    .next-card {
+      width: 5rem;
+      height: auto;
+    }
+
+    &__prev-button,
+    &__next-button {
+      top: 63rem;
+      width: 2.3rem;
+      height: 2rem;
+    }
+
+    &__prev-icon,
+    &__next-icon {
+      width: 1.7rem;
+    }
+
+    &__project-options {
+      flex-direction: column;
+      row-gap: 0.5rem;
+    }
+
+    &__project-button {
+      width: 10rem;
+      height: 2rem;
+      font-size: 0.8rem;
+    }
+
+    &__arrow-right-icon {
+      width: 1.1rem;
+    }
+
+    .prev-button,
+    .next-button {
+      width: 5rem;
+      height: 2rem;
+      font-size: 0.5rem;
+    }
+  }
+}

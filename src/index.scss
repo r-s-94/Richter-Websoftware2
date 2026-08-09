@@ -1,0 +1,14 @@
+@use "./variables.scss" as x;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: x.$text-font-family;
+}

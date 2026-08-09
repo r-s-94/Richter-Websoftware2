@@ -1,0 +1,30 @@
+@use "../../variables.scss" as x;
+
+.project-highlights-section {
+  background-color: x.$light-gray-color3;
+
+  &__headline {
+    padding: 5rem 0;
+    text-align: center;
+    font-family: x.$headline-font-family;
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-highlights-section {
+    &__headline {
+      padding: 5rem 0;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-highlights-section {
+    &__headline {
+      padding: 5rem 0;
+      font-size: 1.3rem;
+    }
+  }
+}

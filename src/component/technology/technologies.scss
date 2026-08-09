@@ -1,0 +1,304 @@
+@use "../../variables.scss" as x;
+
+.technology-section {
+  padding-bottom: 7rem;
+  background-color: x.$dark-blue-color;
+
+  &__headline {
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 5rem 0 3rem 0;
+    font-family: x.$headline-font-family;
+    color: x.$light-gray-color2;
+  }
+
+  &__ux {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 16px -7px white;
+    border-radius: 0.2rem;
+  }
+
+  &__ux:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1rem;
+    content: "";
+    pointer-events: none;
+    box-shadow: inset -10px 0 16px -7px white;
+  }
+
+  &__technology-overview-div {
+    padding: 3rem 0;
+    /*background-color: x.$light-gray-color3;*/
+
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    row-gap: 3rem;
+  }
+
+  /*.overview-section-post-overview::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    pointer-events: none;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7) inset;
+    box-shadow: 0 -6px 8px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.3) inset;
+  }*/
+
+  &__technology-div {
+    display: flex;
+    width: auto;
+    margin: 0 7rem;
+    column-gap: 7rem;
+  }
+
+  &__markup-language-div,
+  &__programming-language-div,
+  &__framework-div,
+  &__version-control-div,
+  &__backend-service-div {
+    @include x.center-column-content();
+  }
+
+  &__backend-service-div {
+    width: 13rem;
+  }
+
+  &__technology-headline {
+    margin-bottom: 3rem;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+
+  &__subdivision-div {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  &__html-div,
+  &__css-div,
+  &__scss-div,
+  &__javascript-div,
+  &__typescript-div,
+  &__react-div,
+  &__tailwind-css-div,
+  &__git-div,
+  &__supabase-div {
+    color: white;
+    @include x.center-column-content();
+  }
+
+  span {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+  }
+
+  &__img-div {
+    display: flex;
+    column-gap: 3rem;
+  }
+
+  &__img {
+    width: 8rem;
+    height: 8rem;
+    background-color: x.$light-gray-color3;
+    border-radius: 50%;
+  }
+}
+
+/*@media screen and (max-width: 1400px) {
+  .technology-section {
+    padding-bottom: 1.5rem;
+
+    &__headline {
+      font-size: 2rem;
+      margin: 3rem 0 1rem 0;
+    }
+
+    &__icon {
+      width: 1.7rem;
+      height: auto;
+    }
+
+    &__technology-overview-div {
+      display: grid;
+      grid-template-columns: auto auto;
+      width: 90%;
+      margin: 0 auto 2rem auto;
+      padding: 3rem 1.5%;
+      column-gap: 0;
+      row-gap: 3rem;
+    }
+
+    &__markup-language-div,
+    &__programming-language-div,
+    &__framework-div,
+    &__version-control-div,
+    &__backend-service-div {
+      @include x.center-column-content();
+    }
+
+    &__technology-headline {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    &__subdivision-div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__html-div,
+    &__css-div,
+    &__scss-div,
+    &__javascript-div,
+    &__typescript-div,
+    &__react-div,
+    &__git-div,
+    &__supabase-div,
+    &__img-div {
+      display: flex;
+      align-items: center;
+      column-gap: 1.7rem;
+    }
+
+    span {
+      font-size: 1.5rem;
+    }
+
+    &__img {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+}*/
+
+@media screen and (max-width: 1000px) {
+  .technology-section {
+    &__headline {
+      font-size: 1.5rem;
+    }
+
+    &__technology-overview-div {
+      margin: 0 auto;
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: auto;
+      row-gap: 3rem;
+    }
+
+    &__markup-language-div,
+    &__programming-language-div,
+    &__framework-div,
+    &__version-control-div,
+    &__backend-service-div {
+      @include x.center-column-content();
+    }
+
+    &__technology-headline {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    &__subdivision-div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__html-div,
+    &__css-div,
+    &__scss-div,
+    &__javascript-div,
+    &__typescript-div,
+    &__react-div,
+    &__git-div,
+    &__supabase-div,
+    &__img-div {
+      display: flex;
+      align-items: center;
+      column-gap: 1.5rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+
+    &__img {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .technology-section {
+    padding-bottom: 5rem;
+
+    &__headline {
+      font-size: 1.3rem;
+    }
+
+    &__technology-div {
+      margin: 0 3rem;
+      column-gap: 5rem;
+    }
+
+    &__markup-language-div,
+    &__programming-language-div,
+    &__framework-div,
+    &__version-control-div,
+    &__backend-service-div {
+      @include x.center-column-content;
+    }
+
+    &__technology-headline {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__subdivision-div {
+      @include x.center-content();
+      row-gap: 0.5rem;
+    }
+
+    &__html-div,
+    &__css-div,
+    &__scss-div,
+    &__javascript-div,
+    &__typescript-div,
+    &__react-div,
+    &__git-div,
+    &__supabase-div,
+    &__img-div {
+      @include x.center-content();
+      column-gap: 1.5rem;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+
+    &__img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

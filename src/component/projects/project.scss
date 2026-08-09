@@ -1,0 +1,44 @@
+@use "../../variables.scss" as x;
+
+.project-section {
+  width: 100%;
+  padding: 3rem 0 5rem 0;
+  @include x.center-column-content();
+  row-gap: 3rem;
+  background-color: x.$light-gray-color3;
+
+  &__headline {
+    padding: 3rem 0 0 0;
+    font-size: 1.7rem;
+    font-family: x.$headline-font-family;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .project-section {
+    &__headline {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-section {
+    padding: 1.5rem 0 3rem 0;
+
+    &__headline {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-section {
+    &__headline {
+      font-size: 1.3rem;
+      margin: 0 5%;
+      text-align: center;
+    }
+  }
+}

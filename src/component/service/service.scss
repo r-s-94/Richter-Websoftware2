@@ -1,0 +1,52 @@
+@use "../../variables.scss" as x;
+
+.service-div {
+  border: 0.1rem solid #dbdbdb;
+  @include x.center-column-content();
+  width: 85%;
+  margin: 0;
+  padding-bottom: 1rem;
+  border-radius: 0.2rem;
+}
+
+/*@media screen and (min-width: 1700px) {
+  .service-div {
+    width: 98%;
+    margin: 0 1%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .service-div {
+    width: 95%;
+    margin: 0 1%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .service-div {
+    width: 95%;
+    margin: 0 1%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .service-div {
+    width: 90%;
+    margin: 0 1%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .service-div {
+    width: 90%;
+    margin: 0 1%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .service-div {
+    width: 90%;
+    margin: 0 1%;
+  }
+}*/

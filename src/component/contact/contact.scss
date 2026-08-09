@@ -1,0 +1,169 @@
+@use "../../variables.scss" as x;
+
+.contact-section {
+  padding: 3rem 0 7rem 0;
+  background-color: x.$light-gray-color3;
+
+  &__headline {
+    text-align: center;
+    padding: 3rem 0 5rem 0;
+    font-size: 1.7rem;
+    font-family: x.$headline-font-family;
+  }
+
+  &__contact-div {
+    //@include x.column-flex-direction-left-side();
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.2rem;
+  }
+
+  &__contact-div-headline {
+    font-size: 1.5rem;
+    margin: 1rem 0 0 5%;
+  }
+
+  &__text {
+    margin: 3rem 0 0 5%;
+    font-size: 1.3rem;
+  }
+
+  &__mail-address {
+    margin: 1rem 0 1rem 5%;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__link {
+    color: x.$blue-color2;
+  }
+
+  &__icon {
+    width: 1.7rem;
+    height: auto;
+    margin-right: 1rem;
+  }
+}
+
+/*@media screen and (max-width: 1400px) {
+  .contact-section {
+    padding: 0.5rem 3% 3rem 3%;
+    margin: 0 3% 5rem 3%;
+
+    &__headline {
+      font-size: 2rem;
+      margin: 2rem 0 1rem 0;
+    }
+
+    &__contact-div {
+      width: 100%;
+      margin: 2rem 0;
+      padding: 3rem 0;
+    }
+
+    &__contact-div-headline {
+      font-size: 1.5rem;
+      margin: 1rem 0 0 5%;
+    }
+
+    &__text {
+      margin: 1rem 0 0 5%;
+      font-size: 1.4rem;
+    }
+
+    &__mail-address {
+      margin: 1rem 0;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 2rem;
+      height: auto;
+      margin: 0 1rem 0 5%;
+    }
+  }
+}*/
+
+@media screen and (max-width: 1000px) {
+  .contact-section {
+    padding: 1.5rem 0 5rem 0;
+
+    &__headline {
+      padding: 1.5rem 0 3rem 0;
+      font-size: 1.5rem;
+    }
+
+    &__contact-div {
+      padding: 2rem 0;
+    }
+
+    &__contact-div-headline {
+      font-size: 1.1rem;
+      margin: 1rem 0 0 5%;
+    }
+
+    &__text {
+      margin: 1rem 0 0 5%;
+      font-size: 1rem;
+    }
+
+    &__mail-address {
+      margin: 1rem 0 1rem 1%;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 1.5rem;
+      height: auto;
+      margin: 0 1rem 0 4%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-section {
+    padding: 1.5rem 0 3rem 0;
+
+    &__headline {
+      padding: 1.5rem 0;
+      font-size: 1.3rem;
+    }
+
+    &__contact-div {
+      width: 95%;
+      padding: 2rem 0;
+    }
+
+    &__contact-div-headline {
+      font-size: 1rem;
+      margin: 0 0 0 5%;
+    }
+
+    &__text {
+      margin: 1rem 3% 0 5%;
+      font-size: 1rem;
+    }
+
+    &__mail-address {
+      margin: 1rem 0 1rem 1%;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 1.5rem;
+      height: auto;
+      margin: 0 1rem 0 4%;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../../variables.scss" as x;
+
+.imprint-section {
+  &__back-icon {
+    width: 2rem;
+    margin: 3rem 0 0 10%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__back-icon:hover {
+    color: x.$blue-color2;
+  }
+
+  &__headline {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  &__note {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  &__imprint {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__person-div {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .imprint-section {
+    &__back-icon {
+      width: 1.7rem;
+    }
+
+    &__headline {
+      font-size: 1.5rem;
+    }
+
+    &__note {
+      font-size: 1.2rem;
+    }
+
+    &__person-div {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imprint-section {
+    &__headline {
+      margin-top: 3rem;
+      font-size: 1.3rem;
+    }
+
+    &__note {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    &__person-div {
+      font-size: 0.9rem;
+    }
+  }
+}

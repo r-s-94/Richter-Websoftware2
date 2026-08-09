@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+$headline-font-family: "Audiowide", sans-serif;
+$text-font-family: "Open Sans", sans-serif;
+
+$black-color: #111;
+$dark-gray-color: #212121;
+$gray-color: #ccc;
+$gray-color2: #dbdbdb;
+$gray-color3: #d3d3d3;
+//$black-background-color: #222222;
+$light-gray-color: #fff;
+$light-gray-color2: #eee;
+$light-gray-color3: #f3f5f6;
+$light-gray-color4: #e5e5e5;
+$blue-color: #0074d9;
+$blue-color2: #24a0ed;
+$dark-blue-color: #001f3f;
+
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-column-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin primary-button {
+  background-color: $black-color;
+  color: $blue-color2;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin secondary-button {
+  background-color: $light-gray-color3;
+  color: $blue-color2;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin accent-button-options {
+  transition: all 0.3s ease-in-out;
+}
+
+.button {
+  @include center-content();
+  border-radius: 0.2rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.primary-button {
+  @include primary-button();
+}
+
+.secondary-button {
+  @include secondary-button();
+}
+
+.accent-button {
+  @include accent-button-options();
+}
+
+.accent-button2 {
+  @include accent-button-options();
+}
+
+.primary-button:hover {
+  background-color: $light-gray-color3;
+}
+
+.secondary-button:hover {
+  background-color: $black-color;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.disable-button {
+  background-color: #ccc;
+}
+
+.back-icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.link {
+  transition: all ease-in-out 0.2s;
+}
+
+.link:hover {
+  color: $blue-color2;
+}
+
+.no-link {
+  text-decoration: none;
+}
+
+.no-hover:hover {
+  cursor: context-menu;
+}

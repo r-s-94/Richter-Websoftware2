@@ -1,0 +1,123 @@
+@use "../../variables.scss" as x;
+
+.nav-section {
+  width: 100%;
+  height: 3rem;
+  @include x.center-content();
+  background-color: x.$dark-gray-color;
+  border: 1px solid x.$gray-color2;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  &__nav-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__link {
+    color: #eee;
+    font-size: 1.2rem;
+  }
+
+  &__hamburger-menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    @include x.center-column-content();
+    row-gap: 7px;
+    display: none;
+  }
+
+  &__bar1,
+  &__bar2,
+  &__bar3 {
+    width: 2rem;
+    height: 3px;
+    background-color: #eee;
+    transition: all 0.5s ease-in-out;
+    border-radius: 0.2rem;
+  }
+
+  &__hamburger-menu:hover {
+    cursor: pointer;
+  }
+
+  .transform-bar1 {
+    margin-bottom: -10px;
+    transform: rotateZ(45deg);
+  }
+
+  .transform-bar2 {
+    opacity: 0;
+  }
+
+  .transform-bar3 {
+    margin-top: -10px;
+    transform: rotateZ(-45deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-section {
+    &__nav-bar {
+      position: absolute;
+      top: 0;
+      height: 15rem;
+      background-color: x.$dark-gray-color;
+      @include x.center-column-content();
+      row-gap: 1rem;
+      transition: all 0.5s ease-in-out;
+      z-index: 1;
+      border: 1px solid x.$gray-color2;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .hidden {
+      top: -16rem;
+    }
+
+    &__link {
+      font-size: 1.3rem;
+    }
+
+    &__hamburger-menu {
+      display: flex;
+      z-index: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-section {
+    &__nav-bar {
+      height: 13rem;
+    }
+
+    &__link {
+      font-size: 1rem;
+    }
+
+    &__bar1,
+    &__bar2,
+    &__bar3 {
+      width: 1.7rem;
+      height: 2px;
+    }
+
+    .transform-bar1 {
+      margin-bottom: -9px;
+    }
+
+    .transform-bar3 {
+      margin-top: -9px;
+    }
+  }
+}
